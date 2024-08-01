@@ -36,8 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(array('error' => 'Invalid product type'));
             exit;
     }
-    
-    file_put_contents('log.txt', 'Adding product: ' . print_r($product, true), FILE_APPEND);
 
     $databaseOperations->addProduct($product);
     http_response_code(201);
