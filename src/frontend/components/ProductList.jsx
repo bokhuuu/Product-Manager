@@ -12,7 +12,7 @@ const ProductList = () => {
 
   const fetchProducts = () => {
     axios
-      .get("http://product-manager.infinityfreeapp.com/api.php")
+      .get("http://134.209.236.114/product-manager/backend/api.php")
       .then((response) => {
         setProducts(response.data);
       })
@@ -26,7 +26,7 @@ const ProductList = () => {
     const productIds = selectedProducts.map((product) => product.id);
 
     axios
-      .delete("http://product-manager.infinityfreeapp.com/api.php", {
+      .delete("http://134.209.236.114/product-manager/backend/api.php", {
         data: { productIds },
       })
       .then(() => {

@@ -1,11 +1,13 @@
 <?php
-abstract class Product {
+abstract class Product
+{
     protected $sku;
     protected $name;
     protected $price;
     protected $type;
 
-    public function __construct($sku, $name, $price, $type) {
+    public function __construct($sku, $name, $price, $type)
+    {
         $this->setSku($sku);
         $this->setName($name);
         $this->setPrice($price);
@@ -15,36 +17,43 @@ abstract class Product {
     abstract public function save(PDO $db);
     abstract public function display();
 
-    public function getSku() {
+    public function getSku()
+    {
         return $this->sku;
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getPrice() {
+    public function getPrice()
+    {
         return $this->price;
     }
 
-    public function getType() {
+    public function getType()
+    {
         return $this->type;
     }
 
-    public function setSku($sku) {
+    public function setSku($sku)
+    {
         $this->sku = $sku;
     }
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function setPrice($price) {
+    public function setPrice($price)
+    {
         $this->price = $price;
     }
 
-    public function setType($type) {
+    public function setType($type)
+    {
         $this->type = $type;
     }
 }
-?>

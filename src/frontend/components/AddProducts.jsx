@@ -30,7 +30,7 @@ const AddProduct = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://product-manager.infinityfreeapp.com/api.php", product)
+      .post("http://134.209.236.114/product-manager/backend/api.php", product)
       .then(() => navigate("/"))
       .catch((error) => console.error("Error adding product:", error));
   };
